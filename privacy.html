@@ -33,16 +33,18 @@
   <body>
     <h1>Política de Privacidade</h1>
     <p class="updated">
-      Última atualização: 6 de outubro de 2026 · Responsável pelo tratamento: Nataliia Pereira ·
+      Última atualização: 11 de outubro de 2026 · Responsável pelo tratamento: Nataliia Pereira ·
       <a href="mailto:oremos.pt@gmail.com">oremos.pt@gmail.com</a>
     </p>
     <p class="lang"><a href="./privacy-en.html">Read in English</a></p>
 
     <h2>1. Sem conta, sem registo</h2>
     <p>
-      O Oremos não tem contas nem início de sessão. Não lhe pedimos nome, email, telefone nem
-      qualquer credencial. O nome que possa indicar na aplicação é apenas para o saudarmos e fica
-      guardado no seu dispositivo.
+      O Oremos não tem contas nem início de sessão. Não lhe pedimos email, telefone, palavra-passe
+      nem qualquer credencial. O nome que indicar na aplicação serve para o saudarmos e é também
+      o nome com que aparecem as suas publicações na Comunidade (exceto as que publicar como
+      anónimo); por isso é guardado no nosso servidor, ligado ao identificador do dispositivo.
+      Pode usar só o primeiro nome, ou outro qualquer, e mudá-lo no Perfil.
     </p>
 
     <h2>2. Identificador do dispositivo</h2>
@@ -50,8 +52,10 @@
       Na primeira abertura, a aplicação gera um identificador aleatório (UUID) e guarda-o no
       dispositivo. Não é o identificador do seu telemóvel nem está ligado à sua identidade: serve
       para saber que uma intenção publicada é sua, para aplicar o limite diário de utilizações de
-      “Uma Palavra à sua medida” e para respeitar os bloqueios que fizer. Se apagar os dados ou
-      desinstalar a aplicação, este identificador desaparece e não é recuperável.
+      “Uma Palavra à sua medida” e para respeitar os bloqueios que fizer. Para que ninguém possa
+      agir em seu nome, a aplicação abre também uma sessão anónima no Supabase (sem email nem
+      palavra-passe), que prova ao servidor que o identificador é seu. Se apagar os dados ou
+      desinstalar a aplicação, o identificador e a sessão desaparecem e não são recuperáveis.
     </p>
 
     <h2>3. O que fica só no seu dispositivo</h2>
@@ -59,7 +63,7 @@
       <strong>O seu diário</strong> — incluindo o estado de espírito e a oração associada — fica
       guardado apenas no seu telemóvel. Não o enviamos para lado nenhum e não lhe temos acesso.
       Ficam igualmente locais as suas intenções pessoais (Oremos +), a árvore e o jardim (dias de
-      oração), os lembretes, o nome e as preferências.
+      oração), os lembretes e as preferências.
     </p>
     <p>
       Versões anteriores da aplicação guardavam o diário no nosso servidor. Ao atualizar, essas
@@ -80,8 +84,20 @@
         <td>Supabase, Inc. (UE)</td>
       </tr>
       <tr>
+        <td>O nome que escolher, o identificador do dispositivo e a sessão anónima</td>
+        <td>Mostrar o seu nome nas suas publicações e garantir que só o próprio pode publicar,
+          apagar ou bloquear em seu nome</td>
+        <td>Supabase, Inc. (UE)</td>
+      </tr>
+      <tr>
         <td>Denúncias e bloqueios</td>
         <td>Moderação de conteúdo, exigida pelas lojas de aplicações</td>
+        <td>Supabase, Inc. (UE)</td>
+      </tr>
+      <tr>
+        <td>Respostas de “Uma Palavra à sua medida” que denunciar (só a resposta gerada, nunca o
+          que escreveu) e o motivo que indicar ao cancelar o Oremos +</td>
+        <td>Rever respostas inadequadas e melhorar a aplicação</td>
         <td>Supabase, Inc. (UE)</td>
       </tr>
       <tr>
@@ -121,7 +137,9 @@
       </tr>
       <tr>
         <td>Estado da subscrição e um identificador anónimo de compra</td>
-        <td>Saber se tem o Oremos + ativo e restaurar compras</td>
+        <td>Saber se tem o Oremos + ativo e restaurar compras. Ao usar “Uma Palavra à sua
+          medida”, o identificador anónimo de compra é enviado ao nosso servidor para confirmar a
+          subscrição junto da RevenueCat.</td>
         <td>RevenueCat, Inc. e a loja (Apple ou Google)</td>
       </tr>
     </table>
@@ -160,7 +178,8 @@
     <h2>9. Apagar os seus dados</h2>
     <p>
       Na aplicação: <strong>Perfil → Apagar todos os dados</strong>. Isto apaga as intenções e
-      comentários publicados, os seus bloqueios e o identificador do dispositivo, e limpa tudo o
+      comentários publicados, os seus bloqueios, o nome, o identificador do dispositivo e a sessão
+      anónima, e limpa tudo o
       que está guardado no dispositivo (diário, jardim, planos, lembrete e nome). Pode também
       apagar o diário entrada a entrada, no Diário, ou desinstalar a aplicação. Também pode escrever-nos para
       <a href="mailto:oremos.pt@gmail.com">oremos.pt@gmail.com</a>.

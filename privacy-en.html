@@ -33,16 +33,18 @@
   <body>
     <h1>Privacy Policy</h1>
     <p class="updated">
-      Last updated: 6 October 2026 · Data controller: Nataliia Pereira ·
+      Last updated: 11 October 2026 · Data controller: Nataliia Pereira ·
       <a href="mailto:oremos.pt@gmail.com">oremos.pt@gmail.com</a>
     </p>
     <p class="lang"><a href="./privacy.html">Ler em português</a></p>
 
     <h2>1. No account, no sign-up</h2>
     <p>
-      Oremos has no accounts and no sign-in. We never ask for your name, email, phone number or any
-      credential. The name you may enter in the app is only used to greet you, and it stays on your
-      device.
+      Oremos has no accounts and no sign-in. We never ask for your email, phone number, a password
+      or any credential. The name you enter in the app is used to greet you and is also the name
+      shown on your Community posts (except those you post anonymously), so it is stored on our
+      server, linked to the device identifier. You can use just a first name, or any name, and
+      change it in Profile.
     </p>
 
     <h2>2. Device identifier</h2>
@@ -50,16 +52,18 @@
       The first time you open the app, it generates a random identifier (a UUID) and stores it on
       your device. It is not your phone's identifier and it is not linked to your identity: it lets
       us know that an intention you published is yours, enforce the daily usage limit of “A Word for
-      you”, and honour the users you have blocked. If you delete your data or uninstall the app, this
-      identifier is gone and cannot be recovered.
+      you”, and honour the users you have blocked. So that nobody else can act in your name, the app
+      also opens an anonymous Supabase session (no email, no password) that proves to the server
+      the identifier is yours. If you delete your data or uninstall the app, the identifier and the
+      session are gone and cannot be recovered.
     </p>
 
     <h2>3. What never leaves your device</h2>
     <p>
       <strong>Your journal</strong> — including your mood and the prayer it relates to — is stored
       only on your phone. We do not send it anywhere and we cannot read it. The same is true of your
-      personal intentions (Oremos +), your tree and garden (days of prayer), your reminders, your
-      name and your preferences.
+      personal intentions (Oremos +), your tree and garden (days of prayer), your reminders and
+      your preferences.
     </p>
     <p>
       Earlier versions of the app stored the journal on our server. When you update, those entries
@@ -80,8 +84,20 @@
         <td>Supabase, Inc. (EU)</td>
       </tr>
       <tr>
+        <td>The name you choose, the device identifier and the anonymous session</td>
+        <td>To show your name on your posts, and to make sure only you can post, delete or block in
+          your name</td>
+        <td>Supabase, Inc. (EU)</td>
+      </tr>
+      <tr>
         <td>Reports and blocks</td>
         <td>Content moderation, required by the app stores</td>
+        <td>Supabase, Inc. (EU)</td>
+      </tr>
+      <tr>
+        <td>“A Word for you” answers you report (only the generated answer, never what you wrote),
+          and the reason you give when cancelling Oremos +</td>
+        <td>To review inappropriate answers and improve the app</td>
         <td>Supabase, Inc. (EU)</td>
       </tr>
       <tr>
@@ -122,7 +138,9 @@
       </tr>
       <tr>
         <td>Subscription status and an anonymous purchase identifier</td>
-        <td>To know whether your Oremos + is active, and to restore purchases</td>
+        <td>To know whether your Oremos + is active, and to restore purchases. When you use “A
+          Word for you”, the anonymous purchase identifier is sent to our server to confirm the
+          subscription with RevenueCat.</td>
         <td>RevenueCat, Inc. and the store (Apple or Google)</td>
       </tr>
     </table>
@@ -161,7 +179,8 @@
     <h2>9. Deleting your data</h2>
     <p>
       In the app: <strong>Profile → Delete all data</strong>. This deletes the intentions and
-      comments you published, your blocks, and the device identifier, and clears everything stored
+      comments you published, your blocks, your name, the device identifier and the anonymous
+      session, and clears everything stored
       on your device (journal, garden, plans, reminder and name). You can also delete journal
       entries one by one in the Journal, or uninstall the app. You can also write to us at <a href="mailto:oremos.pt@gmail.com">oremos.pt@gmail.com</a>.
     </p>
