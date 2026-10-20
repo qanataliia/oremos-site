@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oremos — Oração e Terço</title>
+<meta name="description" content="Um lugar tranquilo para rezar todos os dias: a Palavra de hoje, o Terço guiado e o Exame do dia. Gratuito e sem publicidade.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oremos — Oração e Terço">
+<meta property="og:description" content="Um lugar tranquilo para rezar todos os dias. Gratuito e sem publicidade.">
+<meta property="og:image" content="https://qanataliia.github.io/oremos-site/icon.png">
+<meta property="og:url" content="https://qanataliia.github.io/oremos-site/app.html">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --bg: #FBF7F0; --surface: #ffffff; --ink: #1C1B2E; --muted: #5B5766;
+    --line: #E8E0D2; --green: #2F5D50; --gold: #8A6114;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 520px; margin: 0 auto; padding: 56px 24px 72px; text-align: center; }
+  .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 0 0 1px var(--line), 0 8px 24px rgba(28,27,46,.08); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 34px; line-height: 1.15; margin: 20px 0 6px; }
+  .lede { color: var(--muted); margin: 0 0 32px; }
+  .buttons { display: flex; flex-direction: column; gap: 12px; }
+  .btn {
+    display: block; padding: 16px 20px; border-radius: 14px; text-decoration: none;
+    font-weight: 600; font-size: 18px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  }
+  .btn small { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
+  .btn.primary { background: var(--green); border-color: var(--green); color: #fff; }
+  .btn.primary small { color: #E4EDE9; }
+  .facts { margin: 32px 0 0; color: var(--muted); font-size: 15px; }
+  .foot { margin-top: 40px; font-size: 14px; }
+  .foot a { color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="icon.png" alt="">
+  <h1>Oremos</h1>
+  <p class="lede">Um lugar tranquilo para rezar todos os dias: a Palavra de hoje, o Terço guiado e o Exame do dia.</p>
+
+  <div class="buttons">
+    <a class="btn" id="ios" href="https://apps.apple.com/app/id6814636414">Descarregar na App Store<small>iPhone</small></a>
+    <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.oremos.app">Disponível no Google Play<small>Android</small></a>
+  </div>
+
+  <p class="facts">Gratuito · Sem publicidade · Não precisa de conta</p>
+  <p class="foot"><a href="./">Ajuda e Apoio</a> · <a href="privacy.html">Privacidade</a></p>
+</div>
+<script>
+  // On a phone, go straight to its store; elsewhere, show both buttons.
+  (function () {
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/.test(ua);
+    var target = isIOS ? 'ios' : isAndroid ? 'android' : null;
+    if (!target) return;
+    var btn = document.getElementById(target);
+    btn.classList.add('primary');
+    btn.parentNode.insertBefore(btn, btn.parentNode.firstChild);
+    window.location.replace(btn.href);
+  })();
+</script>
+</body>
+</html>
