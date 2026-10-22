@@ -47,7 +47,7 @@
 
   <div class="buttons">
     <a class="btn" id="ios" href="https://apps.apple.com/app/id6814636414">Descarregar na App Store<small>iPhone</small></a>
-    <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.oremos.app">Disponível no Google Play<small>Android</small></a>
+    <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.oremos.app&amp;referrer=utm_source%3Doremos-site%26utm_medium%3Dweb%26utm_campaign%3Dapp-link">Disponível no Google Play<small>Android</small></a>
   </div>
 
   <p class="facts">Gratuito · Sem publicidade · Não precisa de conta</p>
@@ -59,6 +59,11 @@
     var ua = navigator.userAgent || '';
     var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     var isAndroid = /Android/.test(ua);
+    // ?src=terco etc. → Play install referrer, so Play Console › Acquisition shows
+    // which page or flyer brought the install. Defaults to app-link.
+    var src = (/[?&]src=([a-z0-9-]{1,40})(&|$)/.exec(location.search) || [])[1] || 'app-link';
+    document.getElementById('android').href = 'https://play.google.com/store/apps/details?id=com.oremos.app&referrer=' +
+      encodeURIComponent('utm_source=oremos-site&utm_medium=web&utm_campaign=' + src);
     var target = isIOS ? 'ios' : isAndroid ? 'android' : null;
     if (!target) return;
     var btn = document.getElementById(target);
