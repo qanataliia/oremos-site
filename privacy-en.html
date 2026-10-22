@@ -33,7 +33,7 @@
   <body>
     <h1>Privacy Policy</h1>
     <p class="updated">
-      Last updated: 12 October 2026 · Data controller: Nataliia Pereira ·
+      Last updated: 22 October 2026 · Data controller: Nataliia Pereira ·
       <a href="mailto:oremos.pt@gmail.com">oremos.pt@gmail.com</a>
     </p>
     <p class="lang"><a href="./privacy.html">Ler em português</a></p>
@@ -66,6 +66,12 @@
       your preferences.
     </p>
     <p>
+      Your <strong>confession notes</strong> (Prepare for confession) are kept only on your
+      phone, in the system's secure storage (Keychain / Keystore), outside device backups. They are
+      never sent to our server. Unlocking them with Face ID, Touch ID or your passcode is done by the
+      phone itself — we never receive biometric data.
+    </p>
+    <p>
       Earlier versions of the app stored the journal on our server. When you update, those entries
       are pulled down to your device and <strong>deleted from the server</strong>.
     </p>
@@ -84,9 +90,10 @@
         <td>Supabase, Inc. (EU)</td>
       </tr>
       <tr>
-        <td>The name you choose, the device identifier and the anonymous session</td>
-        <td>To show your name on your posts, and to make sure only you can post, delete or block in
-          your name</td>
+        <td>The name you choose, your phone's region setting (the country chosen in the phone's
+          settings — never your location), the device identifier and the anonymous session</td>
+        <td>To show your name on your posts, to show you Community posts from people who share your
+          language, and to make sure only you can post, delete or block in your name</td>
         <td>Supabase, Inc. (EU)</td>
       </tr>
       <tr>
@@ -103,7 +110,9 @@
       <tr>
         <td>The text you write in “A Word for you”</td>
         <td>Sent only to generate the response. <strong>It is not stored</strong> — not by us, not in
-          our logs — unless you choose to save it to your journal.</td>
+          our logs — unless you choose to save it to your journal. Your phone's region setting
+          goes to our server with it, only so that the response can point to a crisis line in your
+          country if needed; Groq does not receive it.</td>
         <td>Groq, Inc. (USA)</td>
       </tr>
       <tr>
@@ -118,15 +127,21 @@
         <td>Supabase, Inc. (EU)</td>
       </tr>
       <tr>
-        <td>Usage events (first use of each day, visits to and taps on the subscription screen,
-          turning on the daily reminder),
-          tied to the device identifier. Never the content of what you write.</td>
-        <td>To count active users and understand interest in Oremos +</td>
+        <td>Usage events: first use of each day; opening Today's Word, A Word for you, the reading
+          plans, the saints and the rosary; visits to and taps on the subscription screen and the
+          outcome of a purchase attempt (completed, cancelled, pending or failed); turning on the
+          daily reminder. Each event carries the device identifier, the name you chose, your phone's
+          region setting, the system (iOS or Android) and the app version. Never the content of your
+          journal, intentions, confession notes or what you write in “A Word for you”.</td>
+        <td>To count active users, see which parts of the app are used and understand interest in
+          Oremos +</td>
         <td>LogLite (our own service, hosted by Vercel, Inc., USA)</td>
       </tr>
       <tr>
         <td>Crash reports: error type and message, technical stack trace, operating system (iOS or
-          Android) and the device identifier. Never the content of what you write.</td>
+          Android), app version, the device identifier, the name you chose and your phone's region
+          setting. Never the content of your journal, intentions, confession notes or what you write
+          in “A Word for you”.</td>
         <td>To fix crashes</td>
         <td>LogLite (our own service, hosted by Vercel, Inc., USA)</td>
       </tr>
@@ -173,9 +188,9 @@
     <h2>9. Deleting your data</h2>
     <p>
       In the app: <strong>Profile → Delete all data</strong>. This deletes the intentions and
-      comments you published, your blocks, your name, the device identifier and the anonymous
-      session, and clears everything stored
-      on your device (journal, garden, plans, reminder and name). You can also delete journal
+      comments you published, your blocks, your name and region, the device identifier and the
+      anonymous session, and clears everything stored
+      on your device (journal, confession notes, garden, plans, reminder and name). You can also delete journal
       entries one by one in the Journal, or uninstall the app. You can also write to us at <a href="mailto:oremos.pt@gmail.com">oremos.pt@gmail.com</a>.
     </p>
 
