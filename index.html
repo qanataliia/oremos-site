@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="cxHbPsdXZbRnmYpc51d-b6q4qh07z_gd2udD7OO6qAA">
-<title>Oremos — Terço guiado, A Palavra de hoje e Exame do dia</title>
-<meta name="description" content="O Oremos é uma aplicação católica para rezar todos os dias: o terço guiado com os mistérios de hoje, A Palavra de hoje e o Exame do dia. Gratuito, sem publicidade e sem conta.">
+<title>Oremos — A Palavra de hoje, terço guiado, santos e confissão</title>
+<meta name="description" content="Oremos é uma aplicação católica para rezar todos os dias: A Palavra de hoje em 5 minutos, o terço guiado com os mistérios do dia, a vida dos santos e a preparação para a confissão. Gratuito e sem publicidade.">
 <link rel="canonical" href="https://qanataliia.github.io/oremos-site/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Oremos — um tempo com Deus, todos os dias">
-<meta property="og:description" content="O terço guiado que já sabe os mistérios de hoje, A Palavra de hoje e o Exame do dia. Gratuito e sem publicidade.">
+<meta property="og:title" content="Oremos — cinco minutos com Deus, todos os dias">
+<meta property="og:description" content="A Palavra de hoje, o terço guiado, a vida dos santos e a preparação para a confissão. Gratuito e sem publicidade.">
 <meta property="og:image" content="https://qanataliia.github.io/oremos-site/icon.png">
 <meta property="og:url" content="https://qanataliia.github.io/oremos-site/">
 <link rel="icon" href="icon.png">
@@ -106,6 +106,13 @@
   .icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; background: rgba(217,184,119,.12); color: var(--gold); font-size: 22px; margin-bottom: 16px; }
   .card h3 { font-family: var(--serif); font-size: 22px; font-weight: 600; margin: 0 0 8px; }
   .card p { color: var(--muted); margin: 0; }
+  .cards.five { grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .cards.five .card { padding: 20px; text-decoration: none; }
+  .cards.five .card:hover { border-color: rgba(217,184,119,.45); }
+  .cards.five h3 { font-size: 19px; }
+  .cards.five p { font-size: 15px; }
+  section[id] { scroll-margin-top: 24px; }
+  @media (max-width: 1000px) { .cards.five { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
 
   .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
@@ -164,13 +171,10 @@
 
   <header class="hero">
     <div>
-      <span class="tag">✦ Um tempo com Deus, todos os dias</span>
-      <h1>O terço guiado que já sabe os <em>mistérios de hoje</em></h1>
-      <p class="lede">O Oremos prepara a sua oração de cada dia: o terço passo a passo, A Palavra de hoje e o Exame do dia à noite. Abra e reze, sem ter de procurar nada.</p>
-      <a class="cta" href="terco-de-hoje.html">▶ Rezar o terço de hoje</a>
-      <p class="fine">Grátis no navegador. Sem conta, sem instalar.</p>
-
-      <div class="get">
+      <span class="tag">✦ Cinco minutos com Deus, todos os dias</span>
+      <h1>Comece o dia com <em>A Palavra de hoje</em></h1>
+      <p class="lede">Um versículo, uma reflexão e uma oração, já preparados para hoje. E, quando precisar, o terço guiado, a vida dos santos e a preparação para a confissão.</p>
+      <div class="get" style="margin-top:0">
         <div class="qr"><div><img src="img/qr-app.svg" alt="Código QR para descarregar o Oremos" width="92" height="92"></div><small>Leia para instalar</small></div>
         <div class="stores">
           <a class="store" href="https://play.google.com/store/apps/details?id=com.oremos.app&amp;referrer=utm_source%3Doremos-site%26utm_medium%3Dweb%26utm_campaign%3Dhome">
@@ -184,14 +188,15 @@
           <p class="fine">Gratuito · Sem publicidade · Sem conta</p>
         </div>
       </div>
+      <p class="fine" style="margin-top:16px">Ainda não instalou? <a href="terco-de-hoje.html" style="color:var(--gold)">Reze já o terço de hoje no navegador →</a></p>
     </div>
-    <div class="phone tilt-r"><img src="img/01-inicio.jpg" alt="O ecrã Início do Oremos: A Palavra de hoje e o Exame do dia" width="660" height="1434"></div>
+    <div class="phone tilt-r"><img src="img/01-inicio.jpg" alt="O ecrã Início do Oremos com A Palavra de hoje e os passos Palavra, Reflexão e Oração" width="660" height="1434"></div>
   </header>
 </div>
 
 <div class="strip">
   <ul>
-    <li>Sabe os mistérios de cada dia</li>
+    <li>A Palavra de hoje em 5 minutos</li>
     <li>Gratuito e sem publicidade</li>
     <li>Não precisa de conta</li>
     <li>Funciona sem internet</li>
@@ -203,112 +208,121 @@
 
   <section>
     <div class="center">
-      <p class="eyebrow">Porquê o Oremos?</p>
-      <h2>Rezar todos os dias, sem complicar</h2>
-      <p class="sub">Três momentos simples, já preparados para hoje. Basta abrir.</p>
+      <p class="eyebrow">Tudo para a sua oração</p>
+      <h2>Uma aplicação, a vida de oração inteira</h2>
+      <p class="sub">Do versículo da manhã ao exame da noite, com o terço, os santos e a confissão sempre à mão.</p>
     </div>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">✦</div>
-        <h3>Terço guiado</h3>
-        <p>Os mistérios de hoje, um a um, com a passagem do Evangelho e uma graça a pedir. As orações estão todas lá, mesmo para quem as esqueceu.</p>
-      </div>
-      <div class="card">
-        <div class="icon">❝</div>
-        <h3>A Palavra de hoje</h3>
-        <p>Um versículo da Bíblia, uma reflexão curta e um gesto concreto para levar consigo durante o dia.</p>
-      </div>
-      <div class="card">
-        <div class="icon">☾</div>
-        <h3>Exame do dia</h3>
-        <p>À noite, em poucos minutos, reveja o dia com Deus, ao jeito de Santo Inácio: agradecer, pedir luz e pedir perdão.</p>
-      </div>
+    <div class="cards five">
+      <a class="card" href="#palavra"><div class="icon">❝</div><h3>A Palavra de hoje</h3><p>Um versículo e uma reflexão para cada dia.</p></a>
+      <a class="card" href="#rotina"><div class="icon">☀</div><h3>Rotina diária</h3><p>Palavra, Reflexão e Oração, e o Exame à noite.</p></a>
+      <a class="card" href="#terco"><div class="icon">✦</div><h3>Terço guiado</h3><p>Os mistérios de hoje, conta a conta.</p></a>
+      <a class="card" href="#santos"><div class="icon">✠</div><h3>Santos</h3><p>Conheça a vida de quem seguiu Jesus.</p></a>
+      <a class="card" href="#confissao"><div class="icon">⚘</div><h3>Confissão</h3><p>Prepare-se com calma e em privado.</p></a>
     </div>
   </section>
 
-  <section>
+  <section id="palavra">
     <div class="feature">
-      <div class="text">
-        <p class="eyebrow">Terço guiado</p>
-        <h2>Cada mistério, com o Evangelho e uma graça a pedir</h2>
-        <p class="body">O Oremos sabe que mistérios se rezam hoje e acompanha-o conta a conta, do sinal da cruz ao último mistério.</p>
-        <ul>
-          <li><strong>Mistérios do dia</strong>: Gozosos, Dolorosos, Gloriosos ou Luminosos, sem ter de procurar.</li>
-          <li><strong>Uma passagem bíblica</strong> e uma meditação curta em cada mistério.</li>
-          <li><strong>Todas as orações</strong> no ecrã, para quem não as sabe de cor.</li>
-        </ul>
-      </div>
-      <div class="phone tilt-l"><img src="img/03-rosario.jpg" alt="O terço guiado no Oremos: 1.º mistério, A Anunciação" width="660" height="1434" loading="lazy"></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="feature flip">
       <div class="text">
         <p class="eyebrow">A Palavra de hoje</p>
         <h2>Um versículo para guardar no coração</h2>
-        <p class="body">Cada manhã, uma passagem da Bíblia e uma reflexão próxima, escrita para a vida de todos os dias.</p>
+        <p class="body">Cada dia, uma passagem da Bíblia com uma reflexão próxima, escrita para a vida de todos os dias, e um gesto concreto para viver a Palavra.</p>
         <ul>
-          <li><strong>Leitura curta</strong>: cabe num café ou na viagem para o trabalho.</li>
-          <li><strong>“Para hoje”</strong>: um gesto concreto para viver a Palavra.</li>
+          <li><strong>Texto bíblico completo</strong>, não só uma frase solta.</li>
+          <li><strong>“Para hoje”</strong>: uma coisa simples para fazer durante o dia.</li>
           <li><strong>Partilhe</strong> o versículo com quem precisa de o ouvir.</li>
         </ul>
       </div>
-      <div class="phone tilt-r"><img src="img/02-palavra-de-hoje.jpg" alt="A Palavra de hoje no Oremos" width="660" height="1434" loading="lazy"></div>
+      <div class="phone tilt-l"><img src="img/02-hoje.jpg" alt="A Palavra de hoje no Oremos: Salmo 139" width="660" height="1434" loading="lazy"></div>
     </div>
   </section>
 
-  <section>
-    <div class="feature">
-      <div class="text">
-        <p class="eyebrow">O seu jardim</p>
-        <h2>Um hábito que cresce consigo</h2>
-        <p class="body">Cada dia em que reza, a sua árvore cresce. Sem pressão: é só um lembrete gentil de que vale a pena voltar.</p>
-        <ul>
-          <li><strong>Lembrete diário</strong> à hora que escolher: de manhã, à tarde ou à noite.</li>
-          <li><strong>Diário</strong> para guardar intenções, graças e pensamentos.</li>
-          <li><strong>Comunidade</strong>: partilhe uma intenção e reze pelas dos outros.</li>
-        </ul>
-      </div>
-      <div class="phone tilt-l"><img src="img/05-jardim.jpg" alt="O jardim de oração no Oremos" width="660" height="1434" loading="lazy"></div>
-    </div>
-  </section>
-
-  <section>
+  <section id="rotina">
     <div class="center">
-      <p class="eyebrow">Como funciona</p>
-      <h2>Três passos, dez minutos</h2>
+      <p class="eyebrow">Rotina diária</p>
+      <h2>Um pequeno ritmo, todos os dias</h2>
+      <p class="sub">Sem ter de decidir o que rezar: o Oremos prepara o dia por si.</p>
     </div>
     <div class="steps">
-      <div class="step"><h3>Abra o Oremos</h3><p>O dia já está preparado: os mistérios do terço, A Palavra de hoje e o Exame da noite.</p></div>
-      <div class="step"><h3>Reze ao seu ritmo</h3><p>Passo a passo, com o texto de cada oração. Avance só quando estiver pronto.</p></div>
-      <div class="step"><h3>Volte amanhã</h3><p>Escolha a hora do lembrete e veja a sua árvore crescer a cada dia de oração.</p></div>
+      <div class="step"><h3>De manhã: a Palavra</h3><p>Palavra, Reflexão e Oração, em cerca de 5 minutos. O Início mostra o que já fez hoje.</p></div>
+      <div class="step"><h3>Ao longo do dia: o terço</h3><p>Os mistérios do dia, guiados conta a conta, quando tiver um momento.</p></div>
+      <div class="step"><h3>À noite: o Exame</h3><p>Reveja o dia com Deus, ao jeito de Santo Inácio: agradecer, pedir luz e pedir perdão.</p></div>
+    </div>
+    <p class="sub center" style="margin-top:22px">Escolha a hora do lembrete diário e veja a sua árvore crescer a cada dia de oração.</p>
+  </section>
+
+  <section id="terco">
+    <div class="feature flip">
+      <div class="text">
+        <p class="eyebrow">Terço guiado</p>
+        <h2>O terço que já sabe os mistérios de hoje</h2>
+        <p class="body">Gozosos, Dolorosos, Gloriosos ou Luminosos: o Oremos abre os mistérios do dia e acompanha-o conta a conta.</p>
+        <ul>
+          <li><strong>Uma passagem bíblica</strong> e uma graça a pedir em cada mistério.</li>
+          <li><strong>Todas as orações</strong> no ecrã, para quem não as sabe de cor.</li>
+          <li><strong>As contas avançam consigo</strong>, sem perder o fio.</li>
+        </ul>
+        <p style="margin-top:22px"><a class="pill" href="terco-de-hoje.html">Rezar o terço de hoje no navegador →</a></p>
+      </div>
+      <div class="phone tilt-r"><img src="img/03-terco.jpg" alt="O terço guiado no Oremos, com as contas da Avé-Maria" width="660" height="1434" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="santos">
+    <div class="feature">
+      <div class="text">
+        <p class="eyebrow">Santos</p>
+        <h2>Aprenda com quem seguiu Jesus</h2>
+        <p class="body">A vida de santos como São Padre Pio, os Pastorinhos de Fátima, Santo António de Lisboa, São Carlo Acutis e Santa Teresinha, contada de forma simples.</p>
+        <ul>
+          <li><strong>A sua vida</strong>, em poucos parágrafos.</li>
+          <li><strong>Uma oração</strong> para rezar com cada santo.</li>
+          <li><strong>Um gesto para hoje</strong>, inspirado no seu exemplo.</li>
+        </ul>
+      </div>
+      <div class="phone tilt-l"><img src="img/05-santo.jpg" alt="A página de São Padre Pio no Oremos" width="660" height="1434" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="confissao">
+    <div class="feature flip">
+      <div class="text">
+        <p class="eyebrow">Confissão</p>
+        <h2>Prepare a confissão com calma</h2>
+        <p class="body">Depois do Exame do dia, anote o que quer levar ao sacramento. Quando for confessar-se, tem tudo à mão.</p>
+        <ul>
+          <li><strong>Só neste telemóvel</strong>: a lista não vai para a internet.</li>
+          <li><strong>Protegida</strong>: só quem desbloqueia o telemóvel a pode abrir.</li>
+          <li><strong>Apagada depois</strong> de se confessar.</li>
+          <li><strong>Guia passo a passo</strong>, num ecrã escuro e discreto.</li>
+        </ul>
+      </div>
+      <div class="phone tilt-r"><img src="img/06-confissao.jpg" alt="O ecrã Confissão no Oremos" width="660" height="1434" loading="lazy"></div>
     </div>
   </section>
 
   <section>
     <div class="center"><p class="eyebrow">O que é o Oremos?</p><h2>Uma aplicação católica para a oração diária</h2></div>
-    <p class="about">O Oremos é uma aplicação gratuita para rezar todos os dias. Inclui o <a href="terco-de-hoje.html">terço guiado</a> com os mistérios de cada dia (<a href="misterios-gozosos.html">Gozosos</a>, <a href="misterios-dolorosos.html">Dolorosos</a>, <a href="misterios-gloriosos.html">Gloriosos</a> e <a href="misterios-luminosos.html">Luminosos</a>), A Palavra de hoje com uma reflexão, o Exame do dia, a vida dos santos, planos de leitura e uma comunidade para partilhar intenções de oração. Funciona sem conta e sem internet, em português de Portugal e do Brasil, espanhol e inglês. O Oremos + é uma subscrição opcional com conteúdo adicional.</p>
+    <p class="about">O Oremos é uma aplicação gratuita para rezar todos os dias. Inclui A Palavra de hoje com uma reflexão, uma rotina diária com o Exame da noite, o <a href="terco-de-hoje.html">terço guiado</a> com os mistérios de cada dia (<a href="misterios-gozosos.html">Gozosos</a>, <a href="misterios-dolorosos.html">Dolorosos</a>, <a href="misterios-gloriosos.html">Gloriosos</a> e <a href="misterios-luminosos.html">Luminosos</a>), a vida dos santos e uma ajuda privada para preparar a confissão. Funciona sem conta e sem internet, em português de Portugal e do Brasil, espanhol e inglês. O Oremos + é uma subscrição opcional com conteúdo adicional.</p>
   </section>
 
   <section>
     <div class="center"><p class="eyebrow">Perguntas frequentes</p><h2>Tem dúvidas?</h2></div>
     <div class="faq">
-      <details><summary>O Oremos é gratuito?</summary><p>Sim. O terço guiado, A Palavra de hoje e o Exame do dia são gratuitos e sem publicidade. O Oremos + é uma subscrição opcional com conteúdo adicional, e pode experimentá-lo antes de decidir.</p></details>
+      <details><summary>O Oremos é gratuito?</summary><p>Sim. A Palavra de hoje, o terço guiado, o Exame do dia e a preparação para a confissão são gratuitos e sem publicidade. O Oremos + é uma subscrição opcional com conteúdo adicional, como mais santos e os planos de leitura.</p></details>
+      <details><summary>O que escrevo para a confissão fica guardado onde?</summary><p>Só no seu telemóvel. A lista não é enviada para a internet, está protegida pelo desbloqueio do telemóvel e é apagada depois de se confessar.</p></details>
       <details><summary>Preciso de criar uma conta?</summary><p>Não. Pode rezar sem conta. A conta (opcional) serve para usar a Comunidade e sincronizar o Diário entre dispositivos.</p></details>
       <details><summary>Está disponível para Android e iPhone?</summary><p>Sim: no Google Play para Android e na App Store para iPhone. No iPhone, ainda não está disponível nos países da União Europeia.</p></details>
       <details><summary>Funciona sem internet?</summary><p>Sim. As orações, o terço e o conteúdo do dia funcionam offline. A Comunidade e a sincronização precisam de ligação.</p></details>
       <details><summary>Em que línguas está?</summary><p>Português de Portugal, português do Brasil, espanhol e inglês. Pode mudar em Perfil → Idioma.</p></details>
-      <details><summary>Como cancelo o Oremos +?</summary><p>A subscrição é gerida pela Google Play ou pela App Store. Veja os passos em <a href="ajuda.html">Ajuda e Apoio</a>.</p></details>
     </div>
   </section>
 
   <div class="final" id="descarregar">
     <img class="app" src="icon.png" alt="">
     <h2>Comece hoje.</h2>
-    <p class="sub">Um tempo com Deus, todos os dias. Reze o primeiro terço antes mesmo de instalar.</p>
-    <p style="margin-top:26px"><a class="cta" href="terco-de-hoje.html">▶ Rezar o terço de hoje</a></p>
-    <div class="get">
+    <p class="sub">Cinco minutos com Deus, todos os dias. Gratuito, sem publicidade e sem conta.</p>
+        <div class="get">
       <div class="qr"><div><img src="img/qr-app.svg" alt="Código QR para descarregar o Oremos" width="92" height="92"></div><small>Leia para instalar</small></div>
       <div class="stores">
         <a class="store" href="https://play.google.com/store/apps/details?id=com.oremos.app&amp;referrer=utm_source%3Doremos-site%26utm_medium%3Dweb%26utm_campaign%3Dhome">
@@ -330,7 +344,7 @@
   <div class="cols">
     <div>
       <a class="brand" href="./" style="margin:0 0 10px"><img src="icon.png" alt="">Oremos</a>
-      <p style="margin:0">Um tempo com Deus, todos os dias.</p>
+      <p style="margin:0">Cinco minutos com Deus, todos os dias.</p>
     </div>
     <div>
       <h4>Rezar</h4>
