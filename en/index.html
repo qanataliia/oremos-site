@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="cxHbPsdXZbRnmYpc51d-b6q4qh07z_gd2udD7OO6qAA">
+<title>Oremos — Verse of the Day, guided Rosary, saints and confession</title>
+<meta name="description" content="Oremos is a Catholic app for daily prayer: the Verse of the Day in 5 minutes, the guided Rosary with today’s mysteries, the lives of the saints and preparing for confession. Free, with no ads.">
+<link rel="canonical" href="https://qanataliia.github.io/oremos-site/en/">
+<link rel="alternate" hreflang="pt-PT" href="https://qanataliia.github.io/oremos-site/">
+<link rel="alternate" hreflang="pt-BR" href="https://qanataliia.github.io/oremos-site/br/">
+<link rel="alternate" hreflang="es" href="https://qanataliia.github.io/oremos-site/es/">
+<link rel="alternate" hreflang="en" href="https://qanataliia.github.io/oremos-site/en/">
+<link rel="alternate" hreflang="x-default" href="https://qanataliia.github.io/oremos-site/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oremos — five minutes with God, every day">
+<meta property="og:description" content="The Verse of the Day, the guided Rosary, the lives of the saints and preparing for confession. Free, with no ads.">
+<meta property="og:image" content="https://qanataliia.github.io/oremos-site/icon.png">
+<meta property="og:url" content="https://qanataliia.github.io/oremos-site/en/">
+<link rel="icon" href="../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Oremos: Prayer & Rosary",
+  "operatingSystem": "Android, iOS",
+  "applicationCategory": "LifestyleApplication",
+  "inLanguage": ["en", "es", "pt-PT", "pt-BR"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "url": "https://qanataliia.github.io/oremos-site/"
+}
+</script>
+<style>
+  :root {
+    --night: #0d1714; --night-2: #13211d; --card: rgba(255,255,255,.04); --line: rgba(233,226,210,.12);
+    --ink: #f3ede1; --muted: #b5ad9e; --gold: #d9b877; --gold-ink: #1b1508; --green: #2F5D50;
+    --serif: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --sans: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--night); color: var(--ink); font-family: var(--sans);
+    font-size: 17px; line-height: 1.6; font-weight: 300; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  /* Nav */
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--serif); font-size: 21px; font-weight: 700; letter-spacing: -.01em; }
+  .brand img { width: 34px; height: 34px; border-radius: 9px; }
+  .nav-links { display: flex; align-items: center; gap: 8px; }
+  .pill { display: inline-flex; align-items: center; padding: 8px 15px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; color: var(--ink); background: var(--card); }
+  .pill:hover { border-color: rgba(217,184,119,.5); }
+  .pill.solid { background: var(--ink); color: var(--night); border-color: var(--ink); }
+  .langs { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); }
+  .langs a { padding: 5px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-decoration: none; color: var(--muted); }
+  .langs a:hover { color: var(--ink); }
+  .langs a.on { background: rgba(217,184,119,.16); color: var(--gold); }
+  @media (max-width: 720px) { .nav-links .hide-sm { display: none; } }
+
+  /* Hero */
+  .hero { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
+  .hero::before {
+    content: ""; position: absolute; inset: -120px -200px auto auto; width: 720px; height: 720px; z-index: -1;
+    background: radial-gradient(closest-side, rgba(217,184,119,.20), rgba(47,93,80,.18) 55%, transparent 75%);
+  }
+  .tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 13px; border: 1px solid rgba(217,184,119,.35); border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--gold); background: rgba(217,184,119,.07); }
+  h1 { font-family: var(--serif); font-weight: 800; font-size: clamp(36px, 5.6vw, 58px); line-height: 1.08; letter-spacing: -.02em; margin: 20px 0 18px; }
+  h1 em { font-style: normal; color: var(--gold); }
+  .lede { color: var(--muted); font-size: 19px; max-width: 34em; margin: 0 0 28px; }
+  .cta { display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; border-radius: 999px; background: var(--gold); color: var(--gold-ink); font-weight: 700; font-size: 17px; text-decoration: none; box-shadow: 0 10px 34px rgba(217,184,119,.25); }
+  .cta:hover { filter: brightness(1.05); }
+  .fine { color: var(--muted); font-size: 14px; margin: 12px 0 0; }
+
+  .get { display: flex; align-items: center; gap: 22px; margin-top: 34px; padding: 18px; border: 1px solid var(--line); border-radius: 22px; background: var(--card); max-width: 520px; }
+  .qr { flex: none; width: 112px; text-align: center; }
+  .qr div { background: #fff; padding: 10px; border-radius: 12px; }
+  .qr small { display: block; margin-top: 8px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .stores { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .store { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 13px; border: 1px solid var(--line); background: #000; text-decoration: none; }
+  .store:hover { border-color: rgba(217,184,119,.5); }
+  .store svg { width: 24px; height: 24px; flex: none; }
+  .store span { line-height: 1.2; font-weight: 700; font-size: 16px; }
+  .store small { display: block; font-weight: 500; font-size: 11px; color: var(--muted); }
+  .get .fine { margin: 2px 0 0; font-size: 13px; }
+  @media (max-width: 560px) { .qr { display: none; } .get { padding: 14px; } }
+
+  .phone { justify-self: center; width: min(290px, 78vw); padding: 10px; border-radius: 46px; background: #050807; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 40px 90px rgba(0,0,0,.55), 0 0 0 1px rgba(217,184,119,.08); }
+  .phone img { border-radius: 37px; }
+  .phone.tilt-l { transform: rotate(-4deg); }
+  .phone.tilt-r { transform: rotate(4deg); }
+
+  @media (max-width: 880px) {
+    .hero { grid-template-columns: 1fr; padding-top: 24px; gap: 40px; }
+    .hero .phone { order: 2; }
+  }
+
+  /* Strip */
+  .strip { border-block: 1px solid var(--line); overflow: hidden; background: var(--night-2); }
+  .strip ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 34px; list-style: none; margin: 0; padding: 16px 20px; font-size: 15px; color: var(--muted); }
+  .strip li::before { content: "✦"; color: var(--gold); margin-right: 10px; font-size: 11px; }
+
+  /* Sections */
+  section { padding: 88px 0 0; }
+  .eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 0 0 10px; }
+  h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 4vw, 40px); line-height: 1.15; letter-spacing: -.015em; margin: 0 0 14px; }
+  .center { text-align: center; }
+  .sub { color: var(--muted); font-size: 18px; max-width: 36em; margin: 0 auto; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+  .card { padding: 26px; border: 1px solid var(--line); border-radius: 22px; background: var(--card); }
+  .icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; background: rgba(217,184,119,.12); color: var(--gold); font-size: 22px; margin-bottom: 16px; }
+  .card h3 { font-family: var(--serif); font-size: 21px; font-weight: 600; margin: 0 0 8px; }
+  .card p { color: var(--muted); margin: 0; }
+  .cards.five { grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .cards.five .card { padding: 20px; text-decoration: none; }
+  .cards.five .card:hover { border-color: rgba(217,184,119,.45); }
+  .cards.five h3 { font-size: 19px; }
+  .cards.five p { font-size: 15px; }
+  section[id] { scroll-margin-top: 24px; }
+  @media (max-width: 1000px) { .cards.five { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+
+  .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .feature.flip .text { order: 2; }
+  .feature ul { list-style: none; padding: 0; margin: 20px 0 0; }
+  .feature li { position: relative; padding-left: 28px; margin: 12px 0; color: var(--muted); }
+  .feature li::before { content: ""; position: absolute; left: 4px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+  .feature li strong { color: var(--ink); font-weight: 600; }
+  .feature p.body { color: var(--muted); font-size: 18px; }
+  @media (max-width: 880px) { .feature { grid-template-columns: 1fr; gap: 36px; } .feature.flip .text { order: 0; } }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; counter-reset: step; }
+  .step { padding: 26px; border-radius: 22px; border: 1px solid var(--line); background: var(--card); }
+  .step::before { counter-increment: step; content: counter(step); display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--gold); color: var(--gold-ink); font-weight: 800; margin-bottom: 16px; }
+  .step h3 { font-size: 19px; font-weight: 600; margin: 0 0 6px; }
+  .step p { margin: 0; color: var(--muted); }
+  @media (max-width: 880px) { .steps { grid-template-columns: 1fr; } }
+
+  .about { max-width: 760px; margin: 0 auto; color: var(--muted); font-size: 18px; }
+  .about a { color: var(--gold); }
+
+  .faq { max-width: 760px; margin: 36px auto 0; }
+  details { border-bottom: 1px solid var(--line); padding: 18px 4px; }
+  summary { cursor: pointer; font-weight: 500; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--gold); font-size: 22px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  details a { color: var(--gold); }
+
+  .final { margin: 96px 0 0; padding: 56px 28px; border-radius: 30px; text-align: center; border: 1px solid rgba(217,184,119,.25);
+    background: radial-gradient(120% 140% at 50% 0%, rgba(217,184,119,.16), rgba(47,93,80,.22) 50%, var(--night-2) 85%); }
+  .final img.app { width: 76px; height: 76px; border-radius: 18px; margin: 0 auto 18px; }
+  .final .get { margin: 30px auto 0; text-align: left; }
+
+  footer.wrap { margin-top: 96px; padding-top: 48px; padding-bottom: 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  .cols { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+  .cols h4 { color: var(--ink); font-size: 14px; margin: 0 0 10px; }
+  .cols a { display: block; text-decoration: none; margin: 6px 0; }
+  .cols a.brand { display: inline-flex; margin: 0 0 12px; color: var(--ink); }
+  .cols p { margin: 0; max-width: 22em; }
+  .cols a:hover { color: var(--ink); }
+  .copy { padding-top: 20px; margin: 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="./"><img src="../icon.png" alt="">Oremos</a>
+    <div class="nav-links">
+      <div class="langs" aria-label="Language"><a href="../" hreflang="pt-PT">PT</a><a href="../br/" hreflang="pt-BR">BR</a><a href="../es/" hreflang="es">ES</a><a href="../en/" hreflang="en" class="on" aria-current="page">EN</a></div>
+      <a class="pill hide-sm" href="mailto:oremos.pt@gmail.com">Help</a>
+      <a class="pill solid" href="#descarregar">Download</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <span class="tag">✦ Five minutes with God, every day</span>
+      <h1>Begin the day<br>with <em>God’s&nbsp;Word</em></h1>
+      <p class="lede">A verse, a reflection and a prayer, ready for today. And when you need them, the guided Rosary, the lives of the saints and help preparing for confession.</p>
+      <div class="get" style="margin-top:0">
+        <div class="qr"><div><img src="../img/qr-app.svg" alt="QR code to download Oremos" width="92" height="92"></div><small>Scan to install</small></div>
+        <div class="stores">
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.oremos.app&amp;referrer=utm_source%3Doremos-site%26utm_medium%3Dweb%26utm_campaign%3Dhome-en">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.5 12l-9.9 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2Z"/><path fill="#FBBC04" d="m17 8.6-3.5 3.4L17 15.4l3.9-2.2c1.1-.6 1.1-1.8 0-2.4L17 8.6Z"/><path fill="#4285F4" d="M3.6 21.7 13.5 12l3.5 3.4L5 22.1c-.5.3-1 .2-1.4-.4Z"/><path fill="#EA4335" d="M3.6 2.3c.4-.6.9-.7 1.4-.4L17 8.6 13.5 12 3.6 2.3Z"/></svg>
+            <span><small>Get it on</small>Google Play</span>
+          </a>
+          <a class="store" href="https://apps.apple.com/app/id6814636414">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.4-.9-2.4-3.9ZM14 5.6c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4Z"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <p class="fine">Free · No ads · No account</p>
+        </div>
+      </div>
+    </div>
+    <div class="phone tilt-r"><img src="../img/en/01-inicio.jpg" alt="The Oremos Home screen with the Verse of the Day and the steps Verse, Reflection and Prayer" width="660" height="1434"></div>
+  </header>
+</div>
+
+<div class="strip">
+  <ul>
+    <li>The Verse of the Day in 5 minutes</li>
+    <li>Free, with no ads</li>
+    <li>No account needed</li>
+    <li>Works offline</li>
+    <li>Português, Español, English</li>
+  </ul>
+</div>
+
+<main class="wrap">
+
+  <section>
+    <div class="center">
+      <p class="eyebrow">Everything for your prayer</p>
+      <h2>One app for your whole prayer life</h2>
+      <p class="sub">From the morning verse to the evening Examen, with the Rosary, the saints and confession always at hand.</p>
+    </div>
+    <div class="cards five">
+      <a class="card" href="#palavra"><div class="icon">❝</div><h3>Verse of the Day</h3><p>A verse and a reflection for every day.</p></a>
+      <a class="card" href="#rotina"><div class="icon">☀</div><h3>Daily routine</h3><p>Verse, Reflection and Prayer, and the Examen at night.</p></a>
+      <a class="card" href="#terco"><div class="icon">✦</div><h3>Guided Rosary</h3><p>Today’s mysteries, bead by bead.</p></a>
+      <a class="card" href="#santos"><div class="icon">✠</div><h3>Saints</h3><p>The lives of those who followed Jesus.</p></a>
+      <a class="card" href="#confissao"><div class="icon">⚘</div><h3>Confession</h3><p>Prepare calmly and privately.</p></a>
+    </div>
+  </section>
+
+  <section id="palavra">
+    <div class="feature">
+      <div class="text">
+        <p class="eyebrow">Verse of the Day</p>
+        <h2>A verse to keep in your heart</h2>
+        <p class="body">Each day, a Bible passage with a warm reflection written for everyday life, and one concrete thing to live it out.</p>
+        <ul>
+          <li><strong>The full passage</strong>, not just a single line.</li>
+          <li><strong>“For today”</strong>: one simple thing to do during the day.</li>
+          <li><strong>Share</strong> the verse with someone who needs to hear it.</li>
+        </ul>
+      </div>
+      <div class="phone tilt-l"><img src="../img/en/02-hoje.jpg" alt="The Verse of the Day in Oremos: Psalm 139" width="660" height="1434" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="rotina">
+    <div class="center">
+      <p class="eyebrow">Daily routine</p>
+      <h2>A small rhythm, every day</h2>
+      <p class="sub">No need to decide what to pray: Oremos gets each day ready for you.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Morning: the Verse</h3><p>Verse, Reflection and Prayer, in about 5 minutes. Home shows what you’ve done today.</p></div>
+      <div class="step"><h3>During the day: the Rosary</h3><p>Today’s mysteries, guided bead by bead, whenever you have a moment.</p></div>
+      <div class="step"><h3>Night: the Daily Examen</h3><p>Look back on your day with God, in the way of Saint Ignatius: give thanks, ask for light and ask forgiveness.</p></div>
+    </div>
+    <p class="sub center" style="margin-top:22px">Pick a time for your daily reminder and watch your tree grow with every day of prayer.</p>
+  </section>
+
+  <section id="terco">
+    <div class="feature flip">
+      <div class="text">
+        <p class="eyebrow">Guided Rosary</p>
+        <h2>The Rosary that already knows today’s mysteries</h2>
+        <p class="body">Joyful, Sorrowful, Glorious or Luminous: Oremos opens today’s mysteries and walks with you bead by bead.</p>
+        <ul>
+          <li><strong>A Bible passage</strong> and a grace to ask for in each mystery.</li>
+          <li><strong>Every prayer</strong> on screen, for anyone who doesn’t know them by heart.</li>
+          <li><strong>The beads move with you</strong>, so you never lose your place.</li>
+        </ul>
+      </div>
+      <div class="phone tilt-r"><img src="../img/en/03-terco.jpg" alt="The guided Rosary in Oremos, with the Hail Mary beads" width="660" height="1434" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="santos">
+    <div class="feature">
+      <div class="text">
+        <p class="eyebrow">Saints</p>
+        <h2>Learn from those who followed Jesus</h2>
+        <p class="body">The lives of saints like Saint Padre Pio, the shepherd children of Fatima, Saint Anthony, Saint Carlo Acutis and Saint Thérèse, told simply.</p>
+        <ul>
+          <li><strong>Their life</strong>, in a few paragraphs.</li>
+          <li><strong>A prayer</strong> to pray with each saint.</li>
+          <li><strong>Something for today</strong>, inspired by their example.</li>
+        </ul>
+      </div>
+      <div class="phone tilt-l"><img src="../img/en/05-santo.jpg" alt="Saint Padre Pio’s page in Oremos" width="660" height="1434" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="confissao">
+    <div class="feature flip">
+      <div class="text">
+        <p class="eyebrow">Confession</p>
+        <h2>Prepare for confession calmly</h2>
+        <p class="body">After the Daily Examen, note what you want to bring to the sacrament. When you go to confession, it’s all there.</p>
+        <ul>
+          <li><strong>Only on this phone</strong>: the list never goes online.</li>
+          <li><strong>Protected</strong>: only someone who can unlock the phone can open it.</li>
+          <li><strong>Deleted</strong> after you go to confession.</li>
+          <li><strong>A step-by-step guide</strong>, on a dark, discreet screen.</li>
+        </ul>
+      </div>
+      <div class="phone tilt-r"><img src="../img/en/06-confissao.jpg" alt="The Confession screen in Oremos" width="660" height="1434" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="center"><p class="eyebrow">What is Oremos?</p><h2>A Catholic app for daily prayer</h2></div>
+    <p class="about">Oremos is a free app for daily prayer. It includes the Verse of the Day with a reflection, a daily routine with the Daily Examen at night, the guided Rosary with each day’s mysteries (Joyful, Sorrowful, Glorious and Luminous), the lives of the saints and private help preparing for confession. It works without an account and offline, in English, Spanish and Portuguese. Oremos + is an optional subscription with extra content.</p>
+  </section>
+
+  <section>
+    <div class="center"><p class="eyebrow">FAQ</p><h2>Questions?</h2></div>
+    <div class="faq">
+      <details><summary>Is Oremos free?</summary><p>Yes. The Verse of the Day, the guided Rosary, the Daily Examen and confession prep are free, with no ads. Oremos + is an optional subscription with extra content, like more saints and reading plans.</p></details>
+      <details><summary>Where is what I write for confession stored?</summary><p>Only on your phone. The list is never sent online, it’s protected by your phone’s lock, and it’s deleted after you go to confession.</p></details>
+      <details><summary>Do I need an account?</summary><p>No. You can pray without one. An optional account lets you use Community and sync your Journal across devices.</p></details>
+      <details><summary>Is it on Android and iPhone?</summary><p>Yes: on Google Play for Android and the App Store for iPhone. On iPhone, it isn’t available in European Union countries yet.</p></details>
+      <details><summary>Does it work offline?</summary><p>Yes. The prayers, the Rosary and each day’s content work offline. Community and sync need a connection.</p></details>
+      <details><summary>Which languages is it in?</summary><p>English, Spanish and Portuguese (Brazil and Portugal). You can change it in Profile → Language.</p></details>
+    </div>
+  </section>
+
+  <div class="final" id="descarregar">
+    <img class="app" src="../icon.png" alt="">
+    <h2>Start today.</h2>
+    <p class="sub">Five minutes with God, every day. Free, no ads, no account.</p>
+        <div class="get">
+      <div class="qr"><div><img src="../img/qr-app.svg" alt="QR code to download Oremos" width="92" height="92"></div><small>Scan to install</small></div>
+      <div class="stores">
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.oremos.app&amp;referrer=utm_source%3Doremos-site%26utm_medium%3Dweb%26utm_campaign%3Dhome-en">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.5 12l-9.9 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2Z"/><path fill="#FBBC04" d="m17 8.6-3.5 3.4L17 15.4l3.9-2.2c1.1-.6 1.1-1.8 0-2.4L17 8.6Z"/><path fill="#4285F4" d="M3.6 21.7 13.5 12l3.5 3.4L5 22.1c-.5.3-1 .2-1.4-.4Z"/><path fill="#EA4335" d="M3.6 2.3c.4-.6.9-.7 1.4-.4L17 8.6 13.5 12 3.6 2.3Z"/></svg>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
+        <a class="store" href="https://apps.apple.com/app/id6814636414">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.4-.9-2.4-3.9ZM14 5.6c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4Z"/></svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <p class="fine">Free · No ads · No account</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="wrap">
+  <div class="cols">
+    <div>
+      <a class="brand" href="./"><img src="../icon.png" alt="">Oremos</a>
+      <p>Five minutes with God, every day. Free, with no ads.</p>
+    </div>
+    <div>
+      <h4>Pray</h4>
+      <a href="#palavra">Verse of the Day</a>
+      <a href="#rotina">Daily routine</a>
+      <a href="#terco">Guided Rosary</a>
+      <a href="#santos">Saints</a>
+      <a href="#confissao">Confession</a>
+    </div>
+    <div>
+      <h4>App</h4>
+      <a href="https://play.google.com/store/apps/details?id=com.oremos.app&amp;referrer=utm_source%3Doremos-site%26utm_medium%3Dweb%26utm_campaign%3Dhome-en">Google Play</a>
+      <a href="https://apps.apple.com/app/id6814636414">App Store</a>
+      <a href="mailto:oremos.pt@gmail.com">Help</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="../privacy-en.html">Privacy</a>
+      <a href="../terms-en.html">Terms</a>
+      <a href="mailto:oremos.pt@gmail.com">oremos.pt@gmail.com</a>
+    </div>
+  </div>
+  <p class="copy"><span>© 2026 Oremos · Nataliia Pereira</span><span>Made with prayer.</span></p>
+</footer>
+
+</body>
+</html>

@@ -7,6 +7,11 @@
 <title>Oremos — A Palavra de hoje, terço guiado, santos e confissão</title>
 <meta name="description" content="Oremos é uma aplicação católica para rezar todos os dias: A Palavra de hoje em 5 minutos, o terço guiado com os mistérios do dia, a vida dos santos e a preparação para a confissão. Gratuito e sem publicidade.">
 <link rel="canonical" href="https://qanataliia.github.io/oremos-site/">
+<link rel="alternate" hreflang="pt-PT" href="https://qanataliia.github.io/oremos-site/">
+<link rel="alternate" hreflang="pt-BR" href="https://qanataliia.github.io/oremos-site/br/">
+<link rel="alternate" hreflang="es" href="https://qanataliia.github.io/oremos-site/es/">
+<link rel="alternate" hreflang="en" href="https://qanataliia.github.io/oremos-site/en/">
+<link rel="alternate" hreflang="x-default" href="https://qanataliia.github.io/oremos-site/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oremos — cinco minutos com Deus, todos os dias">
 <meta property="og:description" content="A Palavra de hoje, o terço guiado, a vida dos santos e a preparação para a confissão. Gratuito e sem publicidade.">
@@ -53,7 +58,11 @@
   .pill { display: inline-flex; align-items: center; padding: 8px 15px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; color: var(--ink); background: var(--card); }
   .pill:hover { border-color: rgba(217,184,119,.5); }
   .pill.solid { background: var(--ink); color: var(--night); border-color: var(--ink); }
-  @media (max-width: 560px) { .nav-links .hide-sm { display: none; } }
+  .langs { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); }
+  .langs a { padding: 5px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-decoration: none; color: var(--muted); }
+  .langs a:hover { color: var(--ink); }
+  .langs a.on { background: rgba(217,184,119,.16); color: var(--gold); }
+  @media (max-width: 720px) { .nav-links .hide-sm { display: none; } }
 
   /* Hero */
   .hero { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
@@ -168,6 +177,7 @@
   <nav class="nav" aria-label="Principal">
     <a class="brand" href="./"><img src="icon.png" alt="">Oremos</a>
     <div class="nav-links">
+      <div class="langs" aria-label="Idioma"><a href="./" hreflang="pt-PT" class="on" aria-current="page">PT</a><a href="br/" hreflang="pt-BR">BR</a><a href="es/" hreflang="es">ES</a><a href="en/" hreflang="en">EN</a></div>
       <a class="pill hide-sm" href="terco-de-hoje.html">Terço de hoje</a>
       <a class="pill hide-sm" href="ajuda.html">Ajuda</a>
       <a class="pill solid" href="#descarregar">Descarregar</a>
