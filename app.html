@@ -70,6 +70,27 @@
     document.getElementById('ios').href = 'https://apps.apple.com/app/apple-store/id6814636414?pt=129296417&ct=' +
       encodeURIComponent(src) + '&mt=8';
     var target = isIOS ? 'ios' : isAndroid ? 'android' : null;
+    // Count the visit in LogLite so each channel (src) shows up within minutes, before
+    // the stores' own reports catch up. Anonymous: no id, no cookies, only the tag, the
+    // kind of device, the browser language and the site the visitor came from.
+    // sendBeacon (text/plain, no preflight) survives the redirect to the store below.
+    try {
+      var ref = '';
+      try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+      var body = JSON.stringify({
+        eventType: 'site-click',
+        platform: target || 'web',
+        user: 'site',
+        message: src,
+        src: src,
+        referrer: ref,
+        lang: navigator.language || '',
+        isTesting: /^(localhost|127\.0\.0\.1)$/.test(location.hostname) || location.protocol === 'file:'
+      });
+      var url = 'https://loglite.vercel.app/api/ingest/oremos-b93294';
+      if (navigator.sendBeacon) navigator.sendBeacon(url, new Blob([body], { type: 'text/plain' }));
+      else fetch(url, { method: 'POST', body: body, keepalive: true, headers: { 'Content-Type': 'text/plain' } });
+    } catch (e) {}
     if (!target) return;
     var btn = document.getElementById(target);
     btn.classList.add('primary');
