@@ -146,8 +146,8 @@ T = [
      '<li><strong>As contas avançam com você</strong>, sem perder o fio.</li>',
      '<li><strong>Las cuentas avanzan contigo</strong>, sin perder el hilo.</li>',
      '<li><strong>The beads move with you</strong>, so you never lose your place.</li>'),
-    ('        <p style="margin-top:22px"><a class="pill" href="terco-de-hoje.html">Rezar o terço de hoje no navegador →</a></p>\n',
-     '        <p style="margin-top:22px"><a class="pill" href="terco-de-hoje.html">Rezar o terço de hoje no navegador →</a></p>\n',
+    ('        <p style="margin-top:22px;display:flex;flex-wrap:wrap;gap:10px"><a class="pill" href="terco-de-hoje.html">Rezar o terço de hoje no navegador →</a><a class="pill" href="novena-imaculada-conceicao.html">Novena da Imaculada Conceição →</a></p>\n',
+     '        <p style="margin-top:22px;display:flex;flex-wrap:wrap;gap:10px"><a class="pill" href="terco-de-hoje.html">Rezar o terço de hoje no navegador →</a><a class="pill" href="novena-imaculada-conceicao.html">Novena da Imaculada Conceição →</a></p>\n',
      '', ''),
     ('O terço guiado no Oremos, com as contas da Avé-Maria', 'O terço guiado no Oremos, com as contas da Ave-Maria',
      'El rosario guiado en Oremos, con las cuentas del Avemaría', 'The guided Rosary in Oremos, with the Hail Mary beads'),
@@ -251,6 +251,7 @@ PT_ONLY = [
       <a href="misterios-dolorosos.html">Mistérios Dolorosos</a>
       <a href="misterios-gloriosos.html">Mistérios Gloriosos</a>
       <a href="misterios-luminosos.html">Mistérios Luminosos</a>
+      <a href="novena-imaculada-conceicao.html">Novena da Imaculada Conceição</a>
     </div>''', None,
      '''    <div>
       <h4>Rezar</h4>
